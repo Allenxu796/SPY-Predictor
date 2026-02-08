@@ -332,6 +332,18 @@ This project made the limits of traditional ML baselines tangible under strict e
    * `plot_equity_curve.py` → `plot_decile_returns.py` → `threshold_sweep.py`
 3. Check artifacts in `data/` and `results/`.
 
+### Example commands (from the project root)
+
+```bash
+python -m src.models.feature_factory \
+  --input data/raw/your_filename.csv \
+  --output data/processed/train.csv
+
+python scripts/train_pipeline.py \
+  --data data/processed/train.csv \
+  --model two_stage
+```
+
 ---
 
 ## 14. Disclaimer
